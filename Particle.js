@@ -10,7 +10,7 @@ module.exports = class Particle extends GameObject {
       _.random(0, window.innerHeight)
     )
 
-    this.velocity = _.random(0.01, 0.05, true)
+    this.velocity = _.random(0.0005, 0.005, true)
 
 
     this.tag = 'particle'

@@ -17,12 +17,12 @@ module.exports = class Teslacoil extends GameObject {
   constructor(args) {
     super(args)
 
-    this.radius = 200
+    this.radius = 140
 
     this.particleRefs = getParticleRefs(global.gameObjects)
     this.particlesToTaze = []
 
-    this.velocity = 0.03
+    this.velocity = 0.01
 
     this.direction = _.random(0, 2 * Math.PI, true)
 
