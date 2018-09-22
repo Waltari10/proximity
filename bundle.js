@@ -168,13 +168,10 @@ module.exports = class Teslacoil extends GameObject {
   }
   getClosestParticles() {
 
-    // TODO turn into a circle radius
-
     const radius = this.radius
 
     const filtered = this.particleRefs.filter(particle => {
 
-      // 
 
       const xDistance = Math.abs(particle.location.x - this.location.x)
       const yDistance = Math.abs(particle.location.y - this.location.y)
@@ -185,14 +182,9 @@ module.exports = class Teslacoil extends GameObject {
       }
 
       // Remove particles that are actually outside of the circle
-      // console.log(particle.location.distance(this.location))
       if (particle.location.distance(this.location) > radius) {
-        // console.log('triggered')
         return false
       }
-      
-
-
       return true
     })
 
