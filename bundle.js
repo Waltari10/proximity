@@ -154,7 +154,9 @@ module.exports = class Teslacoil extends GameObject {
   constructor(args) {
     super(args)
 
-    this.radius = 140
+    const screenNarrowerPx = window.innerWidth < window.innerHeight ? window.innerWidth : window.innerHeight 
+
+    this.radius = screenNarrowerPx / 6
 
     this.particleRefs = getParticleRefs(global.gameObjects)
     this.particlesToTaze = []
